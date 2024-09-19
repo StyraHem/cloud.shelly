@@ -1,5 +1,5 @@
 {
-  "id": "cloud.shelly",
+  "id": "se.styrahem.shelly",
   "sdk": 3,
   "brandColor": "#4f8dc8",
   "name": {
@@ -18,9 +18,12 @@
       "Shelly Bluetooth"
     ]
   },
-  "version": "3.31.0",
+  "version": "3.31.1",
   "compatibility": ">=8.0.0",
-  "platforms": [ "local", "cloud" ],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
   "author": {
     "name": "Allterco Robotics",
     "email": "homey@shelly.cloud",
@@ -31,6 +34,10 @@
       {
         "name": "Jelger Haanstra",
         "email": "homey@solidewebservices.com"
+      },
+      {
+        "name": "StyraHem",
+        "email": "info@styrahem.se"
       }
     ]
   },

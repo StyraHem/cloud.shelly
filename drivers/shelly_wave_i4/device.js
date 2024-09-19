@@ -111,6 +111,17 @@ class ShellyWavei4Device extends Device {
       this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', report => {
         const action_event = this.util.getActionEventDescription(report.Properties1['Key Attributes'], 'zwave') + '_' + report['Scene Number'];
         this.homey.flow.getDeviceTriggerCard('triggerActionEvent').trigger(this, {"action": action_event}, {"action": action_event}).catch(error => { this.error(error) });
+        
+        /* Fix bug in firmware 10.x */
+        if (this.getSetting("zw_application_version")==='10') {
+          const nr = report['Scene Number'];
+          const state = report['Properties1']['Key Attributes'];
+          if (state === "Key Held Down") {
+            this.setCapabilityValue('input_' + String(nr), true);
+          } else if (state === "Key Released") {
+            this.setCapabilityValue('input_' + String(nr), false);
+          }
+        }
       });
 
       // input_1
