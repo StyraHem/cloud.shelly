@@ -4,8 +4,8 @@
   "sdk": 3,
   "brandColor": "#4f8dc8",
   "name": {
-    "en": "Shelly",
-    "nl": "Shelly"
+    "en": "Shelly (StyraHem)",
+    "nl": "Shelly (StyraHem)"
   },
   "tags": {
     "en": [
@@ -19,7 +19,7 @@
       "Shelly Bluetooth"
     ]
   },
-  "version": "3.31.1",
+  "version": "3.31.2",
   "compatibility": ">=8.0.0",
   "platforms": [
     "local",

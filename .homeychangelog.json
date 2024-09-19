@@ -847,5 +847,8 @@
   },
   "3.31.1": {
     "en": "Fix i4 device"
+  },
+  "3.31.2": {
+    "en": "Change name to not look like master"
   }
 }
